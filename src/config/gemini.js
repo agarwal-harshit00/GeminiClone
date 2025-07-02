@@ -63,8 +63,10 @@
 
 import { GoogleGenAI } from '@google/genai';
 
+
 const ai = new GoogleGenAI({
-    apiKey: "AIzaSyA6eTMXFAbMs7q5hlIs_QJXl6t2Ygz8McE", // Set your API key in environment variable
+    // apiKey: "AIzaSyA6eTMXFAbMs7q5hlIs_QJXl6t2Ygz8McE", // Set your API key in environment variable
+    apiKey: import.meta.env.VITE_API_KEY,
 });
 
 async function main(prompt) {
